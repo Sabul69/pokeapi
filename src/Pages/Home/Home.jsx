@@ -14,9 +14,11 @@ const Home = () => {
   const [team, setTeam] = useState([])
 
   const handleSearch=async()=>{
+    
     setMessage(false);
     setInformation(null);
     setLoader(true);
+    if (pokemon) {
     try {
       const API = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
       const response = await fetch(API);
@@ -27,7 +29,11 @@ const Home = () => {
       setTeam([...team,{Name:result.name,ID:result.id,Img:result.sprites.front_default}])
     } catch (error) {
       setLoader(false);
-      setMessage(true);
+      setMessage("Pokemon not found");
+    }}
+    else{
+      setLoader(false);
+      setMessage("Enter a Name");
     }
   }
 
@@ -38,7 +44,7 @@ const Home = () => {
   return (
     <div className='Home'>
       {message&&
-        ('Pokemon Not Found')}
+        (message)}
       <Form
       clean={pokemon}
       handleSearch={handleSearch}
