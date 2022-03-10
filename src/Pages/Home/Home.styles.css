@@ -1,0 +1,12 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.Pokemons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

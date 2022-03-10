@@ -1,0 +1,25 @@
+.Card{
+    padding: 1rem;
+    margin: 1rem;
+    border: solid #000;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:#F08A5D ;
+    width: 15rem;
+    height: 20rem;
+    box-shadow: 10px 13px 33px -11px rgba(0,0,0,1);
+    -webkit-box-shadow: 10px 13px 33px -11px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 13px 33px -11px rgba(0,0,0,1);
+}
+.Card__img{
+    width: 8rem;
+    border: solid;
+    border-radius: 100%;
+    background-color: #fff;
+}
+.none{
+    display: none;
+}
